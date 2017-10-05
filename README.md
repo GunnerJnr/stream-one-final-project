@@ -165,19 +165,37 @@ It is probably worth noting at this point that the command `bower init` does not
 }
 ```
 
+Next we need to install the dependencies that the project relies on, we will run 3 commands and install `Bootstrap`, `Angular` and `Angular-route`. So let's do that now:
+
+`bower install bootstrap --save`
+
+`bower install angular --save`
+
+`bower install angular-route --save`
+
+All that is left to do now is get ourselves a server to run the project on locally. This will let us run the site on `localhost` as though it were live on the web, it is great for development. Run this command:
+
+`npm install -g http-server`
+
+Now all you need to do if you wish to run the server is navigate to the project root (the page that contain `index.html`), open your command console and type:
+
+`http-server -c-1`
+
+Then we can go to something like `localhost:8080` in the browser to see our project up and running. The `-c-1` parameter basically says to the `http-server`, don't cache anything so we can always view the latest updated version of our file.
+
 [Back to Table Of Contents](#table-of-contents)
 
 ### Usage
 
-![](img/band-site.png)
-
 The final project can be viewed by following this link:
 http://band-site.gunnerjnr.uk/
+
+![](img/band-site.png)
 
 [Back to Table Of Contents](#table-of-contents)
 
 ### Credits
 
-Code Institute
+Code Institute - For the lessons on Front end Development.
 
 [Back to Table Of Contents](#table-of-contents)
