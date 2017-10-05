@@ -78,7 +78,17 @@ we are used to seeing in these logos on a day to day basis.
 
 ### Testing
 
-TODO
+KNOWN BUGS:
+
+`HTTPS` - In `searchiTunes.html` the itunes search API is set up to currently return standard HTTP. If you view the commit history you will see it was set up to run through HTTPSto try and make the project a bit more secure. The problem is that the itunes API does support HTTPS for the main links but it only seems to state standard HTTP support for the image thumbnails. You can verify this by viewing this link:
+
+https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/iTuneSearchAPI/UnderstandingSearchResults.html
+
+and viewing the `"artworkUrl60"` entry in the json data. If you would like to know the error that gets return when using HTTPS it just simply returns this warning:
+
+~~~~
+Mixed Content: The page at 'https://band-site.gunnerjnr.uk/searchiTunes' was loaded over HTTPS, but requested an insecure image 'http://is1.mzstatic.com/image/thumb/Music5/v4/9d/6c/5b/9d6c5b3e-f7e3-e755-a2e6-d7411b4867a6/source/60x60bb.jpg'. This content should also be served over HTTPS.
+~~~~
 
 [Back to Table Of Contents](#table-of-contents)
 
