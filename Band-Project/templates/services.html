@@ -7,7 +7,7 @@
 		<!-- weddings begin -->
 		<div>
 			<img src="img/services/wedding-1.jpg" class="img-thumbnail img-responsive" alt="Wedding Events" />
-			<p class="booking-info">Meatball tongue porchetta cow hock tip venison ham tongue ham ham tail biltong bierschinken cow pig pig braunschweiger pig ham salami mignon ham drumstick, ribs ham meatball ham pork tip hamburger pig tri-tip, cow tail andouillette. Ham pig short shankle, ribs venison pastrami. Round braunschweiger leberkas corned prosciutto, landjaeger frankfurter cow hamburger. Tongue pig pig flank leberkas. Hock pig cow belly pastrami ham tongue andouille ham mignon shank. Pork chicken tip sopressata ham round pancetta cow tail pork. Ham swine chicken, tri-tip pig mignon, ham brisket bregenwurst, ham drumstick bierschinken tip chicken kevin pork pig ribs pig cow ribs swine loin venison tip andouille ham strip, hock bresaola ham tenderloin.</p>
+			<p class="booking-info">If you would like to receive more info or book a wedding please use the form below.</p>
 		</div>
 		<!-- weddings end -->
 	</div>
@@ -23,9 +23,9 @@
 		<!-- Corporate begin -->
 		<div>
 			<img src="img/services/corporate-1.jpg" class="img-thumbnail img-responsive" alt="Corporate Events" />
-			<p class="booking-info">Meatball tongue porchetta cow hock tip venison ham tongue ham ham tail biltong bierschinken cow pig pig braunschweiger pig ham salami mignon ham drumstick, ribs ham meatball ham pork tip hamburger pig tri-tip, cow tail andouillette. Ham pig short shankle, ribs venison pastrami. Round braunschweiger leberkas corned prosciutto, landjaeger frankfurter cow hamburger. Tongue pig pig flank leberkas. Hock pig cow belly pastrami ham tongue andouille ham mignon shank. Pork chicken tip sopressata ham round pancetta cow tail pork. Ham swine chicken, tri-tip pig mignon, ham brisket bregenwurst, ham drumstick bierschinken tip chicken kevin pork pig ribs pig cow ribs swine loin venison tip andouille ham strip, hock bresaola ham tenderloin.</p>
+			<p class="booking-info">We cater for all your corporate events, use the form below to contact us or to book us.</p>
 		</div>
-		<!-- coporate end -->
+		<!-- corporate end -->
 	</div>
 	<!-- fluid row end -->
 </div>
@@ -39,42 +39,44 @@
 			<!-- form heading -->
 			<legend>{{ title }}</legend>
 			<!-- form begin -->
-			<form ng-controller="ContactController" class="form-horizontal" role="form">
+			<form data-ng-controller="ContactController" class="form-horizontal">
 				<!-- input groups begin -->
 				<div class="form-group contact-form">
 					<label for="firstName">{{ firstNameLabel }}</label>
 					<div>
-						<input ng-model="collectFormData.FirstName" class="form-control" id="firstName" placeholder="First Name" required>
+						<input data-ng-model="collectFormData.FirstName" class="form-control" id="firstName" placeholder="First Name" required>
 					</div>
-					<span ng-show="firstNameRequired" class="validation-span">{{firstNameRequired}}</span>
+					<span data-ng-show="firstNameRequired" class="validation-span">{{firstNameRequired}}</span>
 				</div>
 				<div class="form-group contact-form">
 					<label for="lastName">{{ lastNameLabel }}</label>
 					<div>
-						<input ng-model="collectFormData.LastName" class="form-control" id="lastName" placeholder="Last Name" required>
+						<input data-ng-model="collectFormData.LastName" class="form-control" id="lastName" placeholder="Last Name" required>
 					</div>
-					<span ng-show="lastNameRequired" class="validation-span">{{lastNameRequired}}</span>
+					<span data-ng-show="lastNameRequired" class="validation-span">{{lastNameRequired}}</span>
 				</div>
 				<div class="form-group contact-form">
 					<label for="email">{{ emailLabel }}</label>
 					<div>
-						<input ng-model="collectFormData.Email" class="form-control" id="email" placeholder="you're@awesome.com" required>
+						<input data-ng-model="collectFormData.Email" class="form-control" id="email" placeholder="you're@awesome.com" required>
 					</div>
-					<span ng-show="emailRequired" class="validation-span">{{ emailRequired }}</span>
+					<span data-ng-show="emailRequired" class="validation-span">{{ emailRequired }}</span>
 				</div>
 				<div class="form-group contact-form">
 					<label for="message-box">{{ messageLabel }}</label>
 					<div>
-						<textarea ng-model="collectFormData.Message" class="form-control" id="message-box" form="userForm" rows="5" cols="50" placeholder="your message here..."></textarea>
+						<textarea data-ng-model="collectFormData.Message" class="form-control" id="message-box" rows="5" cols="50" placeholder="your message here..."></textarea>
 					</div>
 					<div id="submit-btn">
-						<button ng-click="storeFormData()" type="reset" class="btn-lg btn-warning">Sign up</button>
+						<button data-ng-click="storeFormData()" type="reset" class="btn-lg btn-warning">Sign up</button>
 					</div>
 				</div>
 				<!-- input groups end -->
-				<!-- For Testing: shows input in browser page for testing input works 
-                    <span>{{collectFormData}}</span> 
-                -->
+
+				<!-- For Testing: shows input in browser page for testing input works
+                    <span>{{collectFormData}}</span>
+				-->
+
 			</form>
 			<!-- form end -->
 		</fieldset>
