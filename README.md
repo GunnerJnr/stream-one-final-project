@@ -94,7 +94,7 @@ Once you run this command it should prompt you to enter a few details, such as, 
 ~~~~
 "name": "swing-and-jive-hive",
   "version": "1.0.0",
-  "description": "This website demonstrates the technologies used throughout stream 1 showing front end development",
+  "description": "This website demonstrates the technologies used throughout stream 1 for front end development",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
