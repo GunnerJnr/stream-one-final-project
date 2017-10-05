@@ -19,6 +19,10 @@ DOCUMENTATION FOR STREAM 1 FINAL PROJECT - THE BAND SITE
 
 ### Description
 
+I should note that this repository first existed as part of the entire Stream 1 Repository I had made on Github I decided for marking purposes it would be better to have the final projects in their own separate repository. If you wish to view originally progress and commit history please see the below link:
+
+https://github.com/GunnerJnr/_CodeInstitute/tree/master/Stream-1/Front-End-Development/Final-Project
+
 This web site was inspired by the project brief which can be seen either on the
 home page of this wiki or on the `ReadMe.md` in the project folder in the Stream
 1 git directory.
