@@ -3,7 +3,7 @@ angular.module('bandAppControllers', [])
 	.controller('HomeController', function ($scope) {
 		$scope.title = 'Welcome To Our Site!';
 	})
-	.controller('ItunesController', function ($scope, $http) {
+	.controller('ItunesController', function ($scope, $https) {
 		// variables
 		var onSearchComplete, onError;
 
@@ -16,7 +16,7 @@ angular.module('bandAppControllers', [])
 		// create a function to search i-tunes
 		$scope.searchiTunes = function (artist) {
 			// to get around cross-domain scripting limitations use the json http scripting service
-			$http.jsonp('//itunes.apple.com/search?limit=10', {
+			$https.jsonp('itunes.apple.com/search?limit=10', {
 				params: {
 					callback: 'JSON_CALLBACK',
 					term: artist

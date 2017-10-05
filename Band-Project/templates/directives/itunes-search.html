@@ -48,7 +48,7 @@
 				<!-- (ng-repeat) loop over each song in the list -->
 				<tr data-ng-repeat="song in songs">
 					<!-- (ng-src) load image when data is present -->
-					<td><img class="img-thumbnail img-responsive" data-ng-src="{{ song.artworkUrl60 }}" alt="{{ song.collectionName }}" /></td>
+					<td><img class="img-thumbnail img-responsive" data-ng-src="{{song.artworkUrl60}}" alt="{{ song.collectionName }}" /></td>
 					<!-- track name info -->
 					<td>{{ song.trackName }}</td>
 					<!-- song preview -->
