@@ -66,8 +66,7 @@ probably worth mentioning now, that most of the site and layout utilise a lot of
 the `bootstrap API` throughout.
 
 Underneath the `carousel` in the content section you will probably note some
-dummy content, this was created using a ‘`lorem ipsum`’ style plugin called
-‘`bacon ipsum`’.
+dummy content. This is just to try and make the page a bit more interesting and look like it has some content on the page.
 
 At the bottom of the page you will see the web site ‘`footer`’. It contains some
 copyright text, but more importantly it contains a handful of `social
