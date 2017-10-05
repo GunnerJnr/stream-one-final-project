@@ -112,6 +112,59 @@ Once you run this command it should prompt you to enter a few details, such as, 
   "license": "MIT",
 ~~~~
 
+Once this has finished it should of then created a `package.json` file, filled with content similar to the above example.
+
+Next we will want to install Bower, this tool will help with other libraries that we might want to use such as Bootstrap, JQuery, or AngularJS. To install this run this command:
+
+`npm install -g bower`
+
+We use the `-g` to install it globally, then we are free to use it again for other projects. Now we need to initialise it just like we did for the `package.json` file.
+
+Run the command:
+
+`bower init`
+
+Fill in the prompts or again just press enter for default values, and this should create a file named `bower.json`. It should be filled with content similar to the below:
+
+~~~~
+{
+  "name": "swing-and-jive-hive",
+  "description": "This website demonstrates the technologies used throughout stream 1 for front end development",
+  "main": "index.html",
+  "authors": [
+    "David Gunner (Jnr)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "HTML",
+    "BOOTSTRAP",
+    "CSS",
+    "JS"
+  ],
+  "homepage": "https://github.com/GunnerJnr/stream-one-final-project",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.6",
+    "angular-route": "^1.6.6"
+  }
+}
+~~~~
+
+It is probably worth noting at this point that the command `bower init` does not always work on newer versions of Windows, and can be known to hang indefinitely. If this happens to you then you can simply create a new file called `bower.json`and fill it with the following:
+
+```
+{
+    "name": "your-project-name"
+}
+```
+
 [Back to Table Of Contents](#table-of-contents)
 
 ### Usage
