@@ -16,7 +16,7 @@ angular.module('bandAppControllers', [])
 		// create a function to search i-tunes
 		$scope.searchiTunes = function (artist) {
 			// to get around cross-domain scripting limitations use the json http scripting service
-			$http.jsonp('https://itunes.apple.com/search?limit=10', {
+			$https.jsonp('https://itunes.apple.com/search?limit=10', {
 				params: {
 					callback: 'JSON_CALLBACK',
 					term: artist
