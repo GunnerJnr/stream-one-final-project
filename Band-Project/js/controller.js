@@ -1,5 +1,4 @@
 // create our controller module
-// create our controller module
 angular.module('bandAppControllers', [])
 	.controller('HomeController', function ($scope) {
 		$scope.title = "Welcome To Our Site!";
@@ -14,7 +13,7 @@ angular.module('bandAppControllers', [])
 		$scope.preview = "Preview";
 		$scope.trackCost = "Price";
 
-		// create a function to search itunes
+		// create a function to search i-tunes
 		$scope.searchiTunes = function (artist) {
 			// to get around cross-domain scripting limitations use the json http scripting service
 			$http.jsonp("http://itunes.apple.com/search?limit=10", {
@@ -22,7 +21,7 @@ angular.module('bandAppControllers', [])
 					callback: "JSON_CALLBACK",
 					term: artist
 				}
-				// return a promise. when its returned .then we perform the action
+				// return a promise. when its returned then we perform the action
 			}).then(onSearchComplete, onError);
 		};
 
@@ -104,32 +103,36 @@ angular.module('bandAppControllers', [])
 		}
 
 	})
+	// contact us controller
 	.controller('ContactController', function ($scope) {
 		$scope.title = "Contact Us";
 		$scope.firstNameLabel = "First Name: *";
 		$scope.lastNameLabel = "Last Name: *";
 		$scope.emailLabel = "E-mail: *";
 		$scope.messageLabel = "Message:";
-		$scope.collectFormData = "Message";
-		//
+		$scope.collectFormData = "";
+		// creates a function which will be used to store the data
 		$scope.storeFormData = function () {
-			//
+			// output the user data to the debug console
 			$scope.log = console.log($scope.collectFormData);
 
-			//
+			// store the data entered by the user in the contact form
 			$scope.firstNameRequired = "";
 			$scope.lastNameRequired = "";
 			$scope.emailRequired = "";
-			//
+			// force the user to enter a first name
 			if (!$scope.collectFormData.FirstName) {
+				// display a message to tell the user this field is a requirement
 				$scope.firstNameRequired = "First Name Required";
 			}
-			//
+			// force the user to enter a surname
 			if (!$scope.collectFormData.LastName) {
+				// display a message to tell the user this field is a requirement
 				$scope.lastNameRequired = "Last Name Required";
 			}
-			//
+			// force the user to enter an email address
 			if (!$scope.collectFormData.Email) {
+				// display a message to tell the user this field is a requirement
 				$scope.emailRequired = "E-mail Required";
 			}
 		};
@@ -169,5 +172,4 @@ angular.module('bandAppControllers', [])
 		});
 	});
 
-//----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
