@@ -56,7 +56,7 @@ friendly `URL`’s to work in my `local host` and not the `server`. I assume thi
 will be because my hosting provider needed some kind of configuration to allow
 `routing`.
 
-I decided as it wasn’t part of the brief, that I had lost enough time on this,
+I decided as it was not part of the brief, that I had lost enough time on this,
 and so I decided to move on and continue without this feature.
 
 You will see, instead of a standard type `header`, that I decided to use a
@@ -73,7 +73,7 @@ At the bottom of the page you will see the web site ‘`footer`’. It contains 
 copyright text, but more importantly it contains a handful of `social
 icons/links.`These have some neat `CSS` trickery to make them transition up on
 hovering the mouse, and they also change colour to the appropriate colour that
-we are used to seeing in these logo’s on a day to day basis.
+we are used to seeing in these logos on a day to day basis.
 
 [Back to Table Of Contents](#table-of-contents)
 
@@ -94,7 +94,7 @@ TODO
 ![](img/band-site.png)
 
 The final project can be viewed by following this link:
-https://band-site.gunnerjnr.uk/
+http://band-site.gunnerjnr.uk/
 
 [Back to Table Of Contents](#table-of-contents)
 
