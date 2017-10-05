@@ -456,6 +456,10 @@ footer ul {
         max-width: 200px;
     }
 
+    .audio-player-title {
+        font-size: 1.17em;
+    }
+
     /************************* Modal Style *************************/
     .modal-body {
         margin: 3px;
