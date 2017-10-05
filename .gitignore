@@ -209,4 +209,4 @@ compile_commands.json
 #Misc.
 *.bat
 *.cache
-bower_components/
+.bower_components/
