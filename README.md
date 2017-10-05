@@ -176,12 +176,6 @@ http://band-site.gunnerjnr.uk/
 
 [Back to Table Of Contents](#table-of-contents)
 
-### Contributing
-
-TODO
-
-[Back to Table Of Contents](#table-of-contents)
-
 ### Credits
 
 Code Institute
