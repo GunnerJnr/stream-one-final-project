@@ -73,10 +73,10 @@ fabric.properties
 *.tar.gz
 *.suo
 *.ncb
-*.idb 
-*.obj 
-*.opt 
-*.pch 
+*.idb
+*.obj
+*.opt
+*.pch
 *.jsh
 *.jsall
 *.pyc
@@ -209,3 +209,4 @@ compile_commands.json
 #Misc.
 *.bat
 *.cache
+*.bower_components/
