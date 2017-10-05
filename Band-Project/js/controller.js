@@ -1,24 +1,24 @@
 // create our controller module
 angular.module('bandAppControllers', [])
 	.controller('HomeController', function ($scope) {
-		$scope.title = "Welcome To Our Site!";
+		$scope.title = 'Welcome To Our Site!';
 	})
 	.controller('ItunesController', function ($scope, $http) {
 		// variables
 		var onSearchComplete, onError;
 
-		$scope.title = "Search the iTunes Store";
-		$scope.albumart = "Album Art";
-		$scope.track = "Track";
-		$scope.preview = "Preview";
-		$scope.trackCost = "Price";
+		$scope.title = 'Search the iTunes Store';
+		$scope.albumart = 'Album Art';
+		$scope.track = 'Track';
+		$scope.preview = 'Preview';
+		$scope.trackCost = 'Price';
 
 		// create a function to search i-tunes
 		$scope.searchiTunes = function (artist) {
 			// to get around cross-domain scripting limitations use the json http scripting service
-			$http.jsonp("http://itunes.apple.com/search?limit=10", {
+			$http.jsonp('http://itunes.apple.com/search?limit=10', {
 				params: {
-					callback: "JSON_CALLBACK",
+					callback: 'JSON_CALLBACK',
 					term: artist
 				}
 				// return a promise. when its returned then we perform the action
@@ -42,15 +42,16 @@ angular.module('bandAppControllers', [])
 	// create our audio controller - ref: https://www.webcodegeeks.com/html5/html5-audio-player-example/
 	.controller('AudioController', function ($scope) {
 		// variables
-		var nextButton, audioFiles, currentTrack, playPlaylist, playNext;
+		var audioFiles, currentTrack, playPlaylist, playNext;
 
 		// set the controller properties
-		$scope.title = "Meet The Band";
-		$scope.playlistTitle = "Check out our Playlist";
-		$scope.albumart = "Album Art";
-		$scope.track = "Track";
-		$scope.duration = "Duration";
+		$scope.title = 'Meet The Band';
+		$scope.playlistTitle = 'Check out our Playlist';
+		$scope.albumart = 'Album Art';
+		$scope.track = 'Track';
+		$scope.duration = 'Duration';
 
+		var nextButton;
 		// set click events for the play and stop buttons
 		nextButton = document.getElementById('next-button').addEventListener('click', function () {
 			playNext();
@@ -58,11 +59,11 @@ angular.module('bandAppControllers', [])
 
 		// create the playlist array
 		audioFiles = [
-			"audio/Clarksville.mp3",
-			"audio/DaydreamBeliever.mp3",
-			"audio/ImABeliever.mp3",
-			"audio/SteppingStone.mp3",
-			"audio/tailtoddle_lo.mp3"
+			'audio/Clarksville.mp3',
+			'audio/DaydreamBeliever.mp3',
+			'audio/ImABeliever.mp3',
+			'audio/SteppingStone.mp3',
+			'audio/tailtoddle_lo.mp3'
 		];
 
 		// set the current playlist index (starting point)
@@ -89,7 +90,7 @@ angular.module('bandAppControllers', [])
 		// check if the player exists in the html dom
 		if (playPlaylist === null) {
 			// throw an error displaying the player does not exist
-			var failureReason = "The Audio Player does not exist";
+			var failureReason = 'The Audio Player does not exist';
 			// if we catch an error store it for viewing
 			var throwError = function (reason) {
 				$scope.error = throwError(failureReason);
@@ -105,35 +106,35 @@ angular.module('bandAppControllers', [])
 	})
 	// contact us controller
 	.controller('ContactController', function ($scope) {
-		$scope.title = "Contact Us";
-		$scope.firstNameLabel = "First Name: *";
-		$scope.lastNameLabel = "Last Name: *";
-		$scope.emailLabel = "E-mail: *";
-		$scope.messageLabel = "Message:";
-		$scope.collectFormData = "";
+		$scope.title = 'Contact Us';
+		$scope.firstNameLabel = 'First Name: *';
+		$scope.lastNameLabel = 'Last Name: *';
+		$scope.emailLabel = 'E-mail: *';
+		$scope.messageLabel = 'Message:';
+		$scope.collectFormData = '';
 		// creates a function which will be used to store the data
 		$scope.storeFormData = function () {
 			// output the user data to the debug console
 			$scope.log = console.log($scope.collectFormData);
 
 			// store the data entered by the user in the contact form
-			$scope.firstNameRequired = "";
-			$scope.lastNameRequired = "";
-			$scope.emailRequired = "";
+			$scope.firstNameRequired = '';
+			$scope.lastNameRequired = '';
+			$scope.emailRequired = '';
 			// force the user to enter a first name
 			if (!$scope.collectFormData.FirstName) {
 				// display a message to tell the user this field is a requirement
-				$scope.firstNameRequired = "First Name Required";
+				$scope.firstNameRequired = 'First Name Required';
 			}
 			// force the user to enter a surname
 			if (!$scope.collectFormData.LastName) {
 				// display a message to tell the user this field is a requirement
-				$scope.lastNameRequired = "Last Name Required";
+				$scope.lastNameRequired = 'Last Name Required';
 			}
 			// force the user to enter an email address
 			if (!$scope.collectFormData.Email) {
 				// display a message to tell the user this field is a requirement
-				$scope.emailRequired = "E-mail Required";
+				$scope.emailRequired = 'E-mail Required';
 			}
 		};
 
@@ -171,5 +172,4 @@ angular.module('bandAppControllers', [])
 			content: '<div class="map-pin-text"><strong>If we are not touring we are normally around here..</div>'
 		});
 	});
-
 //----------------------------------------------------------------------------------------------//
