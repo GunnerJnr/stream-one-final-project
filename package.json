@@ -1,0 +1,25 @@
+{
+  "name": "swing-and-jive-hive",
+  "version": "1.0.0",
+  "description": "This website demonstrates the technologies used throughout stream 1 showing front end development",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GunnerJnr/stream-one-final-project.git"
+  },
+  "keywords": [
+    "HTML",
+    "BOOTSTRAP",
+    "CSS",
+    "JS"
+  ],
+  "author": "David Gunner (Jnr)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GunnerJnr/stream-one-final-project/issues"
+  },
+  "homepage": "https://github.com/GunnerJnr/stream-one-final-project#readme"
+}
