@@ -85,7 +85,33 @@ TODO
 
 ### Installation
 
-TODO
+After downloading the project from the repository, you will first need to navigate inside the main project root folder. Once there you will need to initialise NPM.You can do so by running this command:
+
+`npm init`
+
+Once you run this command it should prompt you to enter a few details, such as, name,version, description and so on.If you don't want to enter any values you can just keep hitting enter and it will fill them in with some default values. Below is an example of how it might look:
+
+~~~~
+"name": "swing-and-jive-hive",
+  "version": "1.0.0",
+  "description": "This website demonstrates the technologies used throughout stream 1 showing front end development",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GunnerJnr/stream-one-final-project.git"
+  },
+  "keywords": [
+    "HTML",
+    "BOOTSTRAP",
+    "CSS",
+    "JS"
+  ],
+  "author": "David Gunner (Jnr)",
+  "license": "MIT",
+~~~~
 
 [Back to Table Of Contents](#table-of-contents)
 
