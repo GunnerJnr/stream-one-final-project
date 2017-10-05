@@ -13,4 +13,4 @@ angular.module('bandAppDirectives', [])
             scope: true,
             templateUrl: "templates/directives/itunes-search.html"
         };
-    })
+    });

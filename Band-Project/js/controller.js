@@ -1,14 +1,11 @@
 // create our controller module
 // create our controller module
 angular.module('bandAppControllers', [])
-	.controller('BandController', function ($scope) {
-		// controller logic here
-	})
 	.controller('HomeController', function ($scope) {
 		$scope.title = "Welcome To Our Site!";
 	})
 	.controller('ItunesController', function ($scope, $http) {
-		// variables 
+		// variables
 		var onSearchComplete, onError;
 
 		$scope.title = "Search the iTunes Store";
@@ -93,10 +90,10 @@ angular.module('bandAppControllers', [])
 		// check if the player exists in the html dom
 		if (playPlaylist === null) {
 			// throw an error displaying the player does not exist
-			var reason = "The Audio Player does not exist";
+			var failureReason = "The Audio Player does not exist";
 			// if we catch an error store it for viewing
 			var throwError = function (reason) {
-				$scope.error = reason;
+				$scope.error = throwError(failureReason);
 			};
 		} else {
 			// then start the player
@@ -113,16 +110,16 @@ angular.module('bandAppControllers', [])
 		$scope.lastNameLabel = "Last Name: *";
 		$scope.emailLabel = "E-mail: *";
 		$scope.messageLabel = "Message:";
-		$scope.collectFormData;
+		$scope.collectFormData = "Message";
 		//
 		$scope.storeFormData = function () {
 			//
 			$scope.log = console.log($scope.collectFormData);
 
 			//
-			$scope.firstNameRequired = " ";
-			$scope.lastNameRequired = " ";
-			$scope.emailRequired = " ";
+			$scope.firstNameRequired = "";
+			$scope.lastNameRequired = "";
+			$scope.emailRequired = "";
 			//
 			if (!$scope.collectFormData.FirstName) {
 				$scope.firstNameRequired = "First Name Required";
