@@ -1,6 +1,8 @@
 DOCUMENTATION FOR STREAM 1 FINAL PROJECT - THE BAND SITE
 --------------------------------------------------------
 
+ 
+
 ### Table of Contents
 
 [Description](#description)
@@ -9,17 +11,18 @@ DOCUMENTATION FOR STREAM 1 FINAL PROJECT - THE BAND SITE
 
 [Installation](#installation)
 
-[Usage](#usage)
+[Usage](#usage#contributing)
 
-[Contributing](#contributing)
+[Credits](ts#license)
 
-[Credits](#credits)
-
-[Licence](#license)
+ 
 
 ### Description
 
-I should note that this repository first existed as part of the entire Stream 1 Repository I had made on Github I decided for marking purposes it would be better to have the final projects in their own separate repository. If you wish to view originally progress and commit history please see the below link:
+I should note that this repository first existed as part of the entire Stream 1
+Repository I had made on Github I decided for marking purposes it would be
+better to have the final projects in their own separate repository. If you wish
+to view originally progress and commit history please see the below link:
 
 https://github.com/GunnerJnr/_CodeInstitute/tree/master/Stream-1/Front-End-Development/Final-Project
 
@@ -70,7 +73,8 @@ probably worth mentioning now, that most of the site and layout utilise a lot of
 the `bootstrap API` throughout.
 
 Underneath the `carousel` in the content section you will probably note some
-dummy content. This is just to try and make the page a bit more interesting and look like it has some content on the page.
+dummy content. This is just to try and make the page a bit more interesting and
+look like it has some content on the page.
 
 At the bottom of the page you will see the web site ‘`footer`’. It contains some
 copyright text, but more importantly it contains a handful of `social
@@ -80,31 +84,47 @@ we are used to seeing in these logos on a day to day basis.
 
 [Back to Table Of Contents](#table-of-contents)
 
+ 
+
 ### Testing
 
 KNOWN BUGS:
 
-`HTTPS` - In `searchiTunes.html` the itunes search API is set up to currently return standard HTTP. If you view the commit history you will see it was set up to run through HTTPSto try and make the project a bit more secure. The problem is that the itunes API does support HTTPS for the main links but it only seems to state standard HTTP support for the image thumbnails. You can verify this by viewing this link:
+`HTTPS` - In `searchiTunes.html` the itunes search API is set up to currently
+return standard HTTP. If you view the commit history you will see it was set up
+to run through HTTPSto try and make the project a bit more secure. The problem
+is that the itunes API does support HTTPS for the main links but it only seems
+to state standard HTTP support for the image thumbnails. You can verify this by
+viewing this link:
 
 https://developer.apple.com/library/content/documentation/AudioVideo/Conceptual/iTuneSearchAPI/UnderstandingSearchResults.html
 
-and viewing the `"artworkUrl60"` entry in the json data. If you would like to know the error that gets return when using HTTPS it just simply returns this warning:
+and viewing the `"artworkUrl60"` entry in the json data. If you would like to
+know the error that gets return when using HTTPS it just simply returns this
+warning:
 
-~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Mixed Content: The page at 'https://band-site.gunnerjnr.uk/searchiTunes' was loaded over HTTPS, but requested an insecure image 'http://is1.mzstatic.com/image/thumb/Music5/v4/9d/6c/5b/9d6c5b3e-f7e3-e755-a2e6-d7411b4867a6/source/60x60bb.jpg'. This content should also be served over HTTPS.
-~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 [Back to Table Of Contents](#table-of-contents)
 
+ 
+
 ### Installation
 
-After downloading the project from the repository, you will first need to navigate inside the main project root folder. Once there you will need to initialise NPM.You can do so by running this command:
+After downloading the project from the repository, you will first need to
+navigate inside the main project root folder. Once there you will need to
+initialise NPM.You can do so by running this command:
 
 `npm init`
 
-Once you run this command it should prompt you to enter a few details, such as, name,version, description and so on.If you don't want to enter any values you can just keep hitting enter and it will fill them in with some default values. Below is an example of how it might look:
+Once you run this command it should prompt you to enter a few details, such as,
+name,version, description and so on.If you don't want to enter any values you
+can just keep hitting enter and it will fill them in with some default values.
+Below is an example of how it might look:
 
-~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "name": "swing-and-jive-hive",
   "version": "1.0.0",
   "description": "This website demonstrates the technologies used throughout stream 1 for front end development",
@@ -124,23 +144,30 @@ Once you run this command it should prompt you to enter a few details, such as, 
   ],
   "author": "David Gunner (Jnr)",
   "license": "MIT",
-~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Once this has finished it should of then created a `package.json` file, filled with content similar to the above example.
+Once this has finished it should of then created a `package.json` file, filled
+with content similar to the above example.
 
-Next we will want to install Bower, this tool will help with other libraries that we might want to use such as Bootstrap, JQuery, or AngularJS. To install this run this command:
+Next we will want to install Bower, this tool will help with other libraries
+that we might want to use such as Bootstrap, JQuery, or AngularJS. To install
+this run this command:
 
 `npm install -g bower`
 
-We use the `-g` to install it globally, then we are free to use it again for other projects. Now we need to initialise it just like we did for the `package.json` file.
+We use the `-g` to install it globally, then we are free to use it again for
+other projects. Now we need to initialise it just like we did for the
+`package.json` file.
 
 Run the command:
 
 `bower init`
 
-Fill in the prompts or again just press enter for default values, and this should create a file named `bower.json`. It should be filled with content similar to the below:
+Fill in the prompts or again just press enter for default values, and this
+should create a file named `bower.json`. It should be filled with content
+similar to the below:
 
-~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 {
   "name": "swing-and-jive-hive",
   "description": "This website demonstrates the technologies used throughout stream 1 for front end development",
@@ -169,17 +196,22 @@ Fill in the prompts or again just press enter for default values, and this shoul
     "angular-route": "^1.6.6"
   }
 }
-~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-It is probably worth noting at this point that the command `bower init` does not always work on newer versions of Windows, and can be known to hang indefinitely. If this happens to you then you can simply create a new file called `bower.json`and fill it with the following:
+It is probably worth noting at this point that the command `bower init` does not
+always work on newer versions of Windows, and can be known to hang indefinitely.
+If this happens to you then you can simply create a new file called
+`bower.json`and fill it with the following:
 
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 {
     "name": "your-project-name"
 }
-```
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Next we need to install the dependencies that the project relies on, we will run 3 commands and install `Bootstrap`, `Angular` and `Angular-route`. So let's do that now:
+Next we need to install the dependencies that the project relies on, we will run
+3 commands and install `Bootstrap`, `Angular` and `Angular-route`. So let's do
+that now:
 
 `bower install bootstrap --save`
 
@@ -187,17 +219,25 @@ Next we need to install the dependencies that the project relies on, we will run
 
 `bower install angular-route --save`
 
-All that is left to do now is get ourselves a server to run the project on locally. This will let us run the site on `localhost` as though it were live on the web, it is great for development. Run this command:
+All that is left to do now is get ourselves a server to run the project on
+locally. This will let us run the site on `localhost` as though it were live on
+the web, it is great for development. Run this command:
 
 `npm install -g http-server`
 
-Now all you need to do if you wish to run the server is navigate to the project root (the page that contain `index.html`), open your command console and type:
+Now all you need to do if you wish to run the server is navigate to the project
+root (the page that contain `index.html`), open your command console and type:
 
 `http-server -c-1`
 
-Then we can go to something like `localhost:8080` in the browser to see our project up and running. The `-c-1` parameter basically says to the `http-server`, don't cache anything so we can always view the latest updated version of our file.
+Then we can go to something like `localhost:8080` in the browser to see our
+project up and running. The `-c-1` parameter basically says to the
+`http-server`, don't cache anything so we can always view the latest updated
+version of our file.
 
 [Back to Table Of Contents](#table-of-contents)
+
+ 
 
 ### Usage
 
@@ -207,6 +247,8 @@ http://band-site.gunnerjnr.uk/
 ![](img/band-site.png)
 
 [Back to Table Of Contents](#table-of-contents)
+
+ 
 
 ### Credits
 
