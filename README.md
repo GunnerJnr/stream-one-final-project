@@ -1,9 +1,8 @@
-DOCUMENTATION FOR STREAM 1 FINAL PROJECT - THE BAND SITE
---------------------------------------------------------
+# DOCUMENTATION FOR STREAM 1 FINAL PROJECT - THE BAND SITE
 
- 
+---
 
-### Table of Contents
+## Table of Contents
 
 [Description](#description)
 
@@ -15,7 +14,7 @@ DOCUMENTATION FOR STREAM 1 FINAL PROJECT - THE BAND SITE
 
 [Credits](ts#license)
 
- 
+---
 
 ### Description
 
@@ -84,7 +83,7 @@ we are used to seeing in these logos on a day to day basis.
 
 [Back to Table Of Contents](#table-of-contents)
 
- 
+---
 
 ### Testing
 
@@ -103,13 +102,13 @@ and viewing the `"artworkUrl60"` entry in the json data. If you would like to
 know the error that gets return when using HTTPS it just simply returns this
 warning:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 Mixed Content: The page at 'https://band-site.gunnerjnr.uk/searchiTunes' was loaded over HTTPS, but requested an insecure image 'http://is1.mzstatic.com/image/thumb/Music5/v4/9d/6c/5b/9d6c5b3e-f7e3-e755-a2e6-d7411b4867a6/source/60x60bb.jpg'. This content should also be served over HTTPS.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 [Back to Table Of Contents](#table-of-contents)
 
- 
+---
 
 ### Installation
 
@@ -124,7 +123,7 @@ name,version, description and so on.If you don't want to enter any values you
 can just keep hitting enter and it will fill them in with some default values.
 Below is an example of how it might look:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```json
 "name": "swing-and-jive-hive",
   "version": "1.0.0",
   "description": "This website demonstrates the technologies used throughout stream 1 for front end development",
@@ -144,7 +143,7 @@ Below is an example of how it might look:
   ],
   "author": "David Gunner (Jnr)",
   "license": "MIT",
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 Once this has finished it should of then created a `package.json` file, filled
 with content similar to the above example.
@@ -167,7 +166,7 @@ Fill in the prompts or again just press enter for default values, and this
 should create a file named `bower.json`. It should be filled with content
 similar to the below:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```json
 {
   "name": "swing-and-jive-hive",
   "description": "This website demonstrates the technologies used throughout stream 1 for front end development",
@@ -196,18 +195,18 @@ similar to the below:
     "angular-route": "^1.6.6"
   }
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 It is probably worth noting at this point that the command `bower init` does not
 always work on newer versions of Windows, and can be known to hang indefinitely.
 If this happens to you then you can simply create a new file called
 `bower.json`and fill it with the following:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```json
 {
     "name": "your-project-name"
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 Next we need to install the dependencies that the project relies on, we will run
 3 commands and install `Bootstrap`, `Angular` and `Angular-route`. So let's do
@@ -237,7 +236,7 @@ version of our file.
 
 [Back to Table Of Contents](#table-of-contents)
 
- 
+---
 
 ### Usage
 
@@ -248,10 +247,12 @@ http://band-site.gunnerjnr.uk/
 
 [Back to Table Of Contents](#table-of-contents)
 
- 
+---
 
 ### Credits
 
 Code Institute - For the lessons on Front end Development.
 
 [Back to Table Of Contents](#table-of-contents)
+
+---
