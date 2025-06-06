@@ -92,9 +92,9 @@ angular.module('bandAppControllers', [])
 			// throw an error displaying the player does not exist
 			var failureReason = 'The Audio Player does not exist';
 			// if we catch an error store it for viewing
-			var throwError = function (reason) {
-				$scope.error = throwError(failureReason);
-			};
+                        var throwError = function (reason) {
+                                $scope.error = reason;
+                        };
 		} else {
 			// then start the player
 			playPlaylist.src = audioFiles[currentTrack];
