@@ -105,8 +105,8 @@ angular.module('bandAppControllers', [])
 
 	})
 	// contact us controller
-	.controller('ContactController', function ($scope) {
-		$scope.title = 'Contact Us';
+        .controller('ContactController', function ($scope) {
+                $scope.title = 'Contact Us';
 		$scope.firstNameLabel = 'First Name: *';
 		$scope.lastNameLabel = 'Last Name: *';
 		$scope.emailLabel = 'E-mail: *';
@@ -168,8 +168,12 @@ angular.module('bandAppControllers', [])
 		});
 
 		// add information window
-		var infowindow = new google.maps.InfoWindow({
-			content: '<div class="map-pin-text"><strong>If we are not touring we are normally around here..</div>'
-		});
-	});
+                var infowindow = new google.maps.InfoWindow({
+                        content: '<div class="map-pin-text"><strong>If we are not touring we are normally around here..</div>'
+                });
+        })
+        // tour page controller (previously missing)
+        .controller('TourController', function ($scope) {
+                $scope.title = 'Buy Tickets';
+        });
 //----------------------------------------------------------------------------------------------//
