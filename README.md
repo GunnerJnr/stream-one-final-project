@@ -10,9 +10,9 @@
 
 [Installation](#installation)
 
-[Usage](#usage#contributing)
+[Usage](#usage)
 
-[Credits](ts#license)
+[Credits](#credits)
 
 ---
 
