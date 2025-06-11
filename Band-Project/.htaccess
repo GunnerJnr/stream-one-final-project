@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Handle Angular routes (html5Mode)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ index.html [L]
+
+# Optional: Set cache headers for static assets
+<filesMatch "\.(css|js|png|jpg|jpeg|gif|ico|woff|woff2|ttf|svg)$">
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+</filesMatch>

@@ -12,14 +12,13 @@ angular.module('bandAppControllers', [])
 		$scope.track = 'Track';
 		$scope.preview = 'Preview';
 		$scope.trackCost = 'Price';
-
 		// create a function to search i-tunes
 		$scope.searchiTunes = function (artist) {
-			// to get around cross-domain scripting limitations use the json http scripting service
-			$http.jsonp('http://itunes.apple.com/search?limit=10', {
+			// iTunes API now supports CORS, so we can use regular GET requests
+			$http.get('https://itunes.apple.com/search', {
 				params: {
-					callback: 'JSON_CALLBACK',
-					term: artist
+					term: artist,
+					limit: 10
 				}
 				// return a promise. when its returned then we perform the action
 			}).then(onSearchComplete, onError);
@@ -135,45 +134,77 @@ angular.module('bandAppControllers', [])
 			if (!$scope.collectFormData.Email) {
 				// display a message to tell the user this field is a requirement
 				$scope.emailRequired = 'E-mail Required';
+			}		};
+
+		// Function to initialize the map (called by global initMap)
+		$scope.initialiseMap = function() {
+			// Check if the map container exists and Google Maps is loaded
+			if (document.getElementById('googleMap') && typeof google !== 'undefined' && google.maps) {
+				// set our map properties
+				// create a LatLng object containing the coordinate for the center of the map
+				var latlng = new google.maps.LatLng(53.3498053, -6.260309699999993, 12);
+
+				// prepare the map properties
+				var options = {
+					zoom: 5,
+					center: latlng,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					navigationControl: true,
+					mapTypeControl: false,
+					scrollwheel: false,
+					disableDoubleClickZoom: true
+				};
+
+				// initialise the map object
+				var map = new google.maps.Map(document.getElementById('googleMap'), options);
+
+				// add information window
+				var infowindow = new google.maps.InfoWindow({
+					content: '<div class="map-pin-text"><strong>If we are not touring we are normally around here..</div>'
+				});
+
+				// add Marker
+				var marker1 = new google.maps.Marker({
+					position: latlng,
+					map: map
+				});
+
+				// add listener for a click on the pin
+				google.maps.event.addListener(marker1, 'click', function () {
+					infowindow.open(map, marker1);
+				});
 			}
 		};
 
-		// set our map properties
-		// create a LatLng object containing the coordinate for the center of the map
-		var latlng = new google.maps.LatLng(53.3498053, -6.260309699999993, 12);
+		// Try to initialize map if Google Maps is already loaded
+		if (typeof google !== 'undefined' && google.maps) {
+			$scope.initialiseMap();
+		}
+	})
+	// tour page controller
+	.controller('TourController', function ($scope) {
+		$scope.title = 'Buy Tickets';
+	});
 
-		// prepare the map properties
-		var options = {
-			zoom: 5,
-			center: latlng,
-			mapTypeId: google.maps.MapTypeId.ROADMAP,
-			navigationControl: true,
-			mapTypeControl: false,
-			scrollwheel: false,
-			disableDoubleClickZoom: true
-		};
-
-		// initialize the map object
-		var map = new google.maps.Map(document.getElementById('googleMap'), options);
-
-		// add Marker
-		var marker1 = new google.maps.Marker({
-			position: latlng,
-			map: map
-		});
-
-		// add listener for a click on the pin
-		google.maps.event.addListener(marker1, 'click', function () {
-			infowindow.open(map, marker1);
-		});
-
-		// add information window
-                var infowindow = new google.maps.InfoWindow({
-                        content: '<div class="map-pin-text"><strong>If we are not touring we are normally around here..</div>'
-                });
-        })
-        // tour page controller (previously missing)
-        .controller('TourController', function ($scope) {
-                $scope.title = 'Buy Tickets';
-        });
-//----------------------------------------------------------------------------------------------//
+// Global function for Google Maps callback
+function initMap() {
+	// Wait a moment for Angular to be ready
+	setTimeout(function() {
+		// Only initialise if we're on the services page and the map container exists
+		if (document.getElementById('googleMap')) {
+			// Trigger Angular to initialise the ContactController map
+			var scope = angular.element(document.getElementById('googleMap')).scope();
+			if (scope && scope.initialiseMap) {
+				scope.initialiseMap();
+			} else {
+				// If Angular scope isn't ready, try again in a moment
+				setTimeout(function() {
+					var scope = angular.element(document.getElementById('googleMap')).scope();
+					if (scope && scope.initialiseMap) {
+						scope.initialiseMap();
+					}
+				}, 500);
+			}
+		}
+	}, 100);
+}

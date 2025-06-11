@@ -1,7 +1,8 @@
 // define our application
 angular.module("bandApp", ['ngRoute', 'bandAppControllers', 'bandAppDirectives'])
 	.config(function ($routeProvider, $locationProvider) {
-        $locationProvider.html5Mode(true);  // enable href routing without hashes
+        // Enable html5Mode for clean URLs (works in production)
+        $locationProvider.html5Mode(true);
 		// route our application
 		$routeProvider
 			.when('/home', {

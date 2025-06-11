@@ -2,26 +2,28 @@
   "name": "swing-and-jive-hive",
   "version": "1.0.0",
   "description": "This website demonstrates the technologies used throughout stream 1 showing front end development",
-  "main": "index.html",
-  "scripts": {
-    "test": "jasmine"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GunnerJnr/stream-one-final-project.git"
-  },
   "keywords": [
     "HTML",
     "BOOTSTRAP",
     "CSS",
     "JS"
   ],
-  "author": "David Gunner (Jnr)",
-  "license": "MIT",
+  "homepage": "https://github.com/GunnerJnr/stream-one-final-project#readme",
   "bugs": {
     "url": "https://github.com/GunnerJnr/stream-one-final-project/issues"
   },
-  "homepage": "https://github.com/GunnerJnr/stream-one-final-project#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GunnerJnr/stream-one-final-project.git"
+  },
+  "license": "MIT",
+  "author": "David Gunner (Jnr)",
+  "type": "commonjs",  "main": "index.html",  "scripts": {
+    "start": "cd Band-Project && http-server -c-1 -p 8080",
+    "dev": "cd Band-Project && live-server --entry-file=index.html --port=8080",
+    "build": "echo 'Project is ready for deployment - copy Band-Project folder contents to your web server'",
+    "test": "jasmine"
+  },
   "devDependencies": {
     "jasmine": "^5.1.0"
   }

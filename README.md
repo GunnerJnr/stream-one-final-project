@@ -16,6 +16,40 @@
 
 ---
 
+### Installation
+
+**Prerequisites:**
+- Node.js (for npm package management)
+- Git
+
+**Setup Instructions:**
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/GunnerJnr/stream-one-final-project.git
+   cd stream-one-final-project
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install          # Installs development tools
+   bower install        # Installs frontend dependencies (Angular, Bootstrap, jQuery)
+   ```
+
+3. **Start development server:**
+   ```bash
+   npm start           # Start http-server (basic)
+   npm run dev         # Start live-server (with auto-reload)
+   ```
+
+4. **Access the application:**
+   - Open your browser to `http://localhost:8080` (or the port shown in terminal)
+   - Navigate between pages using the top navigation
+
+**Note:** The `node_modules/` and `bower_components/` folders are generated during installation and are not included in the repository.
+
+---
+
 ### Description
 
 I should note that this repository first existed as part of the entire Stream 1
